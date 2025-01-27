@@ -1,13 +1,13 @@
 import numpy as np
 
-def solver_simplex(cr, R, b):
+def resolver_simplex(cr, R, b):
     """
     Resolve um problema de programação linear usando o Simplex Revisado.
 
     Parâmetros:
-        cr (list): Coeficientes da função objetivo.
-        R (list): Restrições de igualdade.
-        b (list): Lado direito das restrições.
+        cr : Coeficientes da função objetivo.
+        R : Restrições de igualdade.
+        b : Lado direito das restrições.
 
     Retorna:
         dict: Resultado da solução, status e detalhes.
@@ -118,7 +118,7 @@ limites = [(0, np.inf), (0, np.inf), (0, np.inf)]
 R, cr, limites = preparar_entrada(R, cr, limites)
 
 # Resolve o problema
-resultado = solver_simplex(cr, R, b)
+resultado = resolver_simplex(cr, R, b)
 
 # Exibe o resultado
 if resultado["status"] == "Ótima":
